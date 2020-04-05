@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FORM</title>
+</head>
+<body>
+	<h2>Form Data Diri</h2>
+<form>
+	<table>
+		<tr>
+			<td><label for="nama">Nama</label></td>
+			<td><input type="text" id="nama"></td>
+		</tr>
+		<tr>
+			<td><label for="nik">NIK</label></td>
+			<td><input type="number" id="nik"></td>
+		</tr>
+		<tr>
+			<td><label for="alamat">Alamat</label></td>
+			<td><input type="text" name="alamat"></td>
+		</tr>
+		<tr>
+			<td><label for="telp">Telepon</label></td>
+			<td><input type="number" name="telp"></td>
+		</tr>
+		<tr>
+			<td><label for="gender">Jenis Kelamin</label></td>
+			<td><input type="radio" id="l" name="gender"><label for="l">Laki-laki</label>
+			<input type="radio" id="p" name="gender"><label for="p">Perempuan</label></td>
+		</tr>
+		<tr>
+			<td><label for="agama">Agama</label></td>
+			<td><select type="dropdown" id="agama" name="agama">
+			<option></option>
+			<option>Islam</option>
+			<option>Kristen</option>
+			<option>Katolik</option>
+			<option>Hindu</option>
+			<option>Budha</option>
+			<option>Konghucu</option>
+			</select>
+			</td>
+		</tr>
+		<tr>
+			<td><label for="hobby">Hobby</label></td>
+			<td>
+				<input type="checkbox" id="nyanyi"><label for="nyanyi">Menyanyi</label>
+				<input type="checkbox" id="ngoding"><label for="ngoding">Ngoding</label>
+				<input type="checkbox" id="traveling"><label for="traveling">Traveling</label>
+			</td>
+		</tr>
+		<tr>
+			<td><label for="moto">Moto Hidup </label></td>
+			<td><textarea name="moto"></textarea></td>
+		</tr>
+		<tr>
+			<td><button type="submit">Submit</button>
+			<button type="reset">Reset</button></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
