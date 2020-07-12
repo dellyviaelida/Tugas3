@@ -2,62 +2,102 @@
 <html>
 <head>
 	<title>FORM</title>
+	<style type="text/css">
+		body{
+			font-family: candara;
+			background-color: aliceblue;
+		}
+		h2{
+			text-align: center;
+			letter-spacing: 10px;
+		}
+		form{
+			position: relative;
+			max-width: 80%;
+			margin-left: 10%;
+			margin-right: 10%;
+			margin-top: 60px;
+			border-radius: 6px;
+			background-color: ghostwhite;
+			box-shadow: 0 0 7px 0px rgba(136, 146, 146, 0.2);
+			padding: 30px;
+		}
+		.form{
+			width: 100%;
+			display: grid;
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+		label{
+			font-family: 'Helvetica', sans-serif;
+			font-size: 16px;
+			color: black;
+			font-weight: 600;
+		}
+		input, select{
+			font-family: 'Helvetica', sans-serif;
+			padding: 10px 20px 10px 20px;
+			outline: none;
+			border-radius: 3px;
+			border: 1px solid gray;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			font-size: 16px;
+		}
+		.button{
+			background-color: skyblue;
+			color: white;
+			box-shadow: 0 0 7px 0px skyblue;
+			border: 1px solid skyblue;
+		}
+	</style>
 </head>
 <body>
-	<h2>Form Data Diri</h2>
-<form method="post" action="form.php">
-	<table>
-		<tr>
-			<td><label for="nama">Nama</label></td>
-			<td><input type="text" id="nama" name="nama"></td>
-		</tr>
-		<tr>
-			<td><label for="nik">NIK</label></td>
-			<td><input type="number" id="nik" name="nik"></td>
-		</tr>
-		<tr>
-			<td><label for="alamat">Alamat</label></td>
-			<td><input type="text" name="alamat"></td>
-		</tr>
-		<tr>
-			<td><label for="telp">Telepon</label></td>
-			<td><input type="number" name="telp"></td>
-		</tr>
-		<tr>
-			<td><label for="gender">Jenis Kelamin</label></td>
-			<td><input type="radio" id="l" name="gender" value="Laki-laki"><label for="l">Laki-laki</label>
-			<input type="radio" id="p" name="gender" value="Perempuan"><label for="p">Perempuan</label></td>
-		</tr>
-		<tr>
-			<td><label for="agama">Agama</label></td>
-			<td><select type="dropdown" id="agama" name="agama">
-			<option>--pilih--</option>
-			<option>Islam</option>
-			<option>Kristen</option>
-			<option>Katolik</option>
-			<option>Hindu</option>
-			<option>Budha</option>
-			<option>Konghucu</option>
+	<h2>Form Pengumpulan Tugas Kuliah</h2>
+	<h5 align="center">Isi semua data dengan benar dan ubah nama file sesuai format.</h5>
+	<form method="post" action="form.php" enctype="multipart/form-data">
+		<div class="form">
+			<label for="nim">NIM</label>
+			<input type="number" id="nim" name="nim" placeholder="Nomor identitas mahasiswa">
+		</div>
+		<div class="form">
+			<label for="nama">Nama Lengkap</label>
+			<input type="text" id="nama" name="nama" placeholder="Nama depan dan belakang">
+		</div>
+		<div class="form">
+			<label for="kls">Kelas</label>
+			<input type="text" id="kls" name="kls" placeholder="Kelas yang diambil">
+		</div>
+		<div class="form">
+			<label for="telp">No. Handphone</label>
+			<input type="number" id="telp" name="telp" placeholder="Nomor handphone yang bisa dihubungi">
+		</div>
+		<div class="form">
+			<label for="email">E-mail</label>
+			<input type="email" id="email" name="email" placeholder="Alamat E-mail yang aktif">
+		</div>
+		<div class="form">
+			<label for="matkul">Mata Kuliah</label>
+			<input type="text" id="matkul" name="matkul" placeholder="Nama mata kuliah">
+		</div>
+		<div class="form">
+			<label for="jfile">Jenis File</label>
+			<select type="dropdown" id="jfile" name="jfile">
+			<option value="">--Pilih--</option>
+			<option value="Tugas">Tugas</option>
+			<option value="UK">UK</option>
+			<option value="UTS">UTS</option>
+			<option value="UAS">UAS</option>
 			</select>
-			</td>
-		</tr>
-		<tr>
-			<td><label for="hobby">Hobby</label></td>
-			<td>
-				<input type="checkbox" id="nyanyi" name="hobi" value="Menyanyi"><label for="nyanyi">Menyanyi</label>
-				<input type="checkbox" id="ngoding" name="hobi" value="Ngoding"><label for="ngoding">Ngoding</label>
-				<input type="checkbox" id="traveling" name="hobi" value="Traveling"><label for="traveling">Traveling</label>
-			</td>
-		</tr>
-		<tr>
-			<td><label for="moto">Moto Hidup </label></td>
-			<td><textarea name="moto"></textarea></td>
-		</tr>
-		<tr>
-			<td><button type="submit">Submit</button>
-			<button type="reset">Reset</button></td>
-		</tr>
-	</table>
-</form>
+			
+		</div>
+		<div class="form">
+			<label for="upfile">Upload File (pdf/docx/xlsx/jpg/dll)</label>
+			<input type="file" id="upfile" name="upfile">
+		</div>
+		<div class="form">
+			<input type="submit" class="button" value="SUBMIT">
+		</div>
+	</form>
 </body>
 </html>
